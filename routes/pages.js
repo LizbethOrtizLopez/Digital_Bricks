@@ -49,7 +49,7 @@ router.get("/register",/* redirectHome,*/ (req, res) => {
     if(userId){
         console.log(userId)
     }
-    res.sendFile('register.html',{root:path.join(reqPath,"views/")});
+    res.render('register');
 })
 
 router.get("/login", /*redirectHome,*/ (req, res) => {
@@ -61,7 +61,7 @@ router.get("/login", /*redirectHome,*/ (req, res) => {
 
     }
 
-    res.sendFile('login.html',{root:path.join(reqPath,"views/")});
+    res.render('login');
 })
 router.get("/perfil", /*redirectLogin,*/ (req, res) => {
     console.log("Perfil pages ")
@@ -71,7 +71,8 @@ router.get("/perfil", /*redirectLogin,*/ (req, res) => {
     if(userId){
         console.log(userId)
     }
-    res.sendFile('perfil.html',{root:path.join(reqPath,"views/")});
+    res.render('perfil',{msj :req.session});
+
 })
 
 router.get("/1", /*redirectLogin,*/ (req, res) => {

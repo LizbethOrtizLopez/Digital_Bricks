@@ -29,7 +29,7 @@
       <h1 class="header center orange-text">Ingresa a tu cuenta</h1>
       <div class="row center">
         <section class="form-register">
-          <form action="/auth/login" method="POST">
+          <form id="loginForm" action="/auth/login" method="POST">
             <h4 align:center;>Ingresar</h4>
             <p>E-Mail: </p><input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
             <p>Contraseña: </p> <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña">
@@ -68,7 +68,10 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="login.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
 

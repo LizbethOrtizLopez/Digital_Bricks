@@ -7,7 +7,7 @@ var reqPath = path.join(__dirname, '../');
 
 const redirectLogin = (req, res, next) => {
     if(!req.session.userId){
-        res.sendFile('login.html', { root: path.join(reqPath, "views/") });
+        res.send('login', { root: path.join(reqPath, "views/") });
     }else{
         next()
     }
@@ -15,7 +15,7 @@ const redirectLogin = (req, res, next) => {
 
 const redirectHome = (req, res, next) => {
     if(!req.session.userId){
-        res.sendFile('perfil.html', { root: path.join(reqPath, "views/") });
+        res.send('perfil', { root: path.join(reqPath, "views/") });
     }else{
         next()
     }
@@ -29,6 +29,7 @@ router.post("/register", authController.register)
 router.post("/login", authController.login)
 
 router.post("/logout",authController.logout)
+
 
 
 module.exports = router;

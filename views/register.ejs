@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Digital Bricks</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Digital Bricks</a>
+      <ul class="right hide-on-med-and-down">
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Registra una nueva cuenta</h1>
+      <div class="row center">
+        <div id=register>
+          <section class="form-register">
+            <form id ="registration" action="/auth/register" method="POST">
+              <h4>REGISTRO</h4>
+              <p>Nombre: </p><input class="controls" type="text" name="nombres" id="nombres"
+                placeholder="Ingrese su Nombre">
+              <p>Apellidos: </p><input class="controls" type="text" name="apellidos" id="apellidos"
+                placeholder="Ingrese su Apellido">
+              <p>E-Mail: </p><input class="controls" type="email" name="correo" id="correo"
+                placeholder="Ingrese su Correo">
+              <p>Contraseña: </p> <input class="controls" type="password" name="password" id="password"
+                placeholder="Ingrese su Contraseña">
+              <p>Confirmar contraseña: </p> <input class="controls" type="password" name="passwordConfirm" id="passwordConfirm"
+                placeholder="Ingrese su Contraseña">
+              <p>Nombre de Usuario: </p><input class="controls" type="text" name="username" id="username"
+                placeholder="Ingrese su user name">
+              <p>Edad: </p><input class="controls" type="text" name="edad" id="edad" placeholder="Ingrese Edad">
+              <p>Estoy de acuerdo con <a href="">Terminos y Condiciones</a></p>
+              <input class="botons" type="submit" value="Registrar">
+              <p><a href="/login">¿Ya tengo Cuenta?</a></p>
+            </form>
+            <% if( typeof(error) != "undefined"){%>
+              <% if(error){%>
+                <h4><%=error%></error></h4>
+              <% } %>
+            <% } %>
+          </section>
+        </div>
+        
+      </div>
+
+      <br><br>
+
+    </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Sobre nosotros</h5>
+          <p class="grey-text text-lighten-4">Buscamos un mundo donde la educación tecnológica sea de alto impacto para
+            niños y niñas de todo el mundo, teniendo a la mano herramientas que ayudden a comprender estos temas para su
+            desarrollo</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Equipo 10</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="register.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="../controllers/auth.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+</body>
+
+</html>

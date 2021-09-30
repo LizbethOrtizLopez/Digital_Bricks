@@ -26,6 +26,7 @@ const users =[
 
 
 const app = express();
+app.set('view engine', 'ejs')
 
 app.use(session({
     name: SESS_NAME,

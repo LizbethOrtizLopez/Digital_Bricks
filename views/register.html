@@ -31,7 +31,7 @@
       <div class="row center">
         <div id=register>
           <section class="form-register">
-            <form action="/auth/register" method="POST">
+            <form id ="registration" action="/auth/register" method="POST">
               <h4>REGISTRO</h4>
               <p>Nombre: </p><input class="controls" type="text" name="nombres" id="nombres"
                 placeholder="Ingrese su Nombre">
@@ -41,7 +41,7 @@
                 placeholder="Ingrese su Correo">
               <p>Contraseña: </p> <input class="controls" type="password" name="password" id="password"
                 placeholder="Ingrese su Contraseña">
-              <p>Confirmar contraseña: </p> <input class="controls" type="password" name="passwordConfirm" id="password"
+              <p>Confirmar contraseña: </p> <input class="controls" type="password" name="passwordConfirm" id="passwordConfirm"
                 placeholder="Ingrese su Contraseña">
               <p>Nombre de Usuario: </p><input class="controls" type="text" name="username" id="username"
                 placeholder="Ingrese su user name">
@@ -80,7 +80,12 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="register.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="../controllers/auth.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
 
